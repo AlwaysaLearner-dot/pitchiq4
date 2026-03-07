@@ -1,0 +1,153 @@
+.page {
+  min-height:100vh;padding:48px 20px 80px;
+  background:radial-gradient(ellipse 700px 500px at 50% 0%,rgba(0,212,255,.05),transparent 60%),var(--bg);
+}
+.inner { max-width:860px;margin:0 auto;animation:fadeUp .5s var(--ease); }
+
+.hdr { text-align:center;margin-bottom:52px; }
+.brand { font-family:var(--ff-m);font-size:11px;letter-spacing:3px;color:var(--dim);margin-bottom:10px; }
+.title {
+  font-family:var(--ff-h);font-size:clamp(48px,9vw,80px);font-weight:800;letter-spacing:-1px;
+  background:linear-gradient(135deg,var(--bright),var(--cyan));
+  -webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:8px;
+}
+.sub { font-size:13px;color:var(--mid);font-family:var(--ff-m); }
+
+.scoreSection { display:flex;flex-direction:column;align-items:center;gap:24px;margin-bottom:52px; }
+.ring {
+  width:170px;height:170px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  position:relative;box-shadow:0 0 56px rgba(0,212,255,.18);
+}
+.ringHole {
+  position:absolute;inset:12px;background:var(--bg);border-radius:50%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+}
+.ringN { font-family:var(--ff-h);font-size:52px;font-weight:800;color:var(--cyan);line-height:1; }
+.ringL { font-family:var(--ff-m);font-size:10px;color:var(--dim); }
+.ratings { display:flex;gap:12px;flex-wrap:wrap;justify-content:center; }
+.rcard { padding:12px 20px;text-align:center;min-width:88px; }
+.rcL { display:block;font-family:var(--ff-m);font-size:9px;color:var(--dim);
+  letter-spacing:1px;text-transform:uppercase;margin-bottom:4px; }
+.rcV { display:block;font-family:var(--ff-h);font-size:17px;font-weight:700;color:var(--cyan); }
+
+.sec { margin-bottom:44px; }
+.secTitle {
+  font-family:var(--ff-h);font-size:16px;font-weight:700;letter-spacing:2px;
+  color:var(--cyan);margin-bottom:18px;padding-bottom:12px;
+  border-bottom:1px solid var(--wire);text-transform:uppercase;
+}
+.fbCard { padding:28px;display:flex;flex-direction:column;gap:18px; }
+.fbText { font-size:15px;line-height:1.8;color:var(--text); }
+.topTip {
+  background:rgba(0,212,255,.06);border:1px solid rgba(0,212,255,.18);
+  border-radius:var(--r);padding:18px;font-size:14px;line-height:1.7;color:var(--text);
+}
+.tipL { display:block;font-family:var(--ff-m);font-size:10px;letter-spacing:2px;
+  color:var(--cyan);text-transform:uppercase;margin-bottom:8px; }
+.twoCol { display:grid;grid-template-columns:1fr 1fr;gap:14px; }
+@media(max-width:560px){.twoCol{grid-template-columns:1fr;}}
+.colBox { padding:18px; }
+.colT { font-family:var(--ff-m);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;
+  margin-bottom:10px;font-weight:600; }
+.colList { padding-left:18px; }
+.colList li { font-size:13px;color:var(--mid);line-height:1.8; }
+
+/* Slide cards */
+.slideCards { display:flex;flex-direction:column;gap:16px; }
+.sc { padding:24px; }
+.scHdr { display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px;gap:12px; }
+.scL { display:flex;align-items:center;gap:10px;flex:1; }
+.scR { display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex-shrink:0; }
+.scNum { font-family:var(--ff-m);font-size:10px;color:var(--dim);background:var(--surf);
+  border:1px solid var(--wire);border-radius:6px;padding:2px 8px;flex-shrink:0; }
+.scTitle2 { font-family:var(--ff-h);font-size:17px;font-weight:700;color:var(--bright); }
+.scRating { font-family:var(--ff-m);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px; }
+.scScore  { font-family:var(--ff-h);font-size:18px;color:var(--dim); }
+
+/* Time bar */
+.timeRow { display:flex;align-items:center;gap:10px;margin-bottom:8px; }
+.timeLabel { display:flex;flex-direction:column;align-items:flex-start;gap:2px;
+  font-family:var(--ff-m);font-size:10px;color:var(--dim);min-width:52px; }
+.timeTaken { font-family:var(--ff-h);font-size:16px;font-weight:700;color:var(--text); }
+.timeSugg  { font-family:var(--ff-h);font-size:14px;font-weight:600;color:var(--dim); }
+.timeBarWrap { flex:1; }
+.timeBarTrack { height:8px;background:var(--wire);border-radius:4px;overflow:visible;position:relative; }
+.timeBarFill  { height:100%;border-radius:4px;transition:width .4s;min-width:4px; }
+.suggMarker   {
+  position:absolute;top:-4px;width:2px;height:16px;background:var(--cyan);border-radius:2px;
+  transform:translateX(-50%);
+}
+.suggMarker::after { content:'S';position:absolute;top:-14px;left:50%;transform:translateX(-50%);
+  font-size:8px;font-family:var(--ff-m);color:var(--cyan); }
+.timeAssess { font-size:12px;font-family:var(--ff-m);line-height:1.5;margin-bottom:12px; }
+
+.scBlock {
+  background:var(--surf);border:1px solid var(--wire);border-radius:var(--r);
+  padding:14px;margin-bottom:10px;
+}
+.scIdeal { background:rgba(0,212,255,.04);border-color:rgba(0,212,255,.14); }
+.scBL { font-family:var(--ff-m);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--dim);margin-bottom:6px; }
+.scBT { font-size:13px;color:var(--mid);line-height:1.7; }
+.fillerNote { font-family:var(--ff-m);font-size:12px;margin-bottom:10px; }
+.improvement {
+  background:rgba(0,229,153,.04);border:1px solid rgba(0,229,153,.15);
+  border-radius:var(--r);padding:14px;font-size:13px;line-height:1.7;color:var(--text);
+}
+.impL { display:block;font-family:var(--ff-m);font-size:10px;letter-spacing:2px;
+  color:var(--green);text-transform:uppercase;margin-bottom:6px; }
+
+/* Chat */
+.chatCard { padding:24px;display:flex;flex-direction:column;gap:16px; }
+.chatHeader { display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap; }
+.chatIntro { font-size:13px;color:var(--mid);line-height:1.6;flex:1; }
+.chatQuota { font-family:var(--ff-m);font-size:11px;color:var(--dim);
+  background:var(--surf);border:1px solid var(--wire);border-radius:8px;padding:4px 10px;
+  white-space:nowrap;flex-shrink:0; }
+.quotaLow { color:var(--amber);border-color:rgba(255,183,0,.4); }
+
+.chatMessages {
+  display:flex;flex-direction:column;gap:12px;
+  min-height:100px;max-height:360px;overflow-y:auto;padding:4px;
+}
+.chatEmpty { display:flex;flex-direction:column;gap:10px; }
+.chatEmpty p { font-size:13px;color:var(--dim);font-family:var(--ff-m); }
+.chatSuggestions { display:flex;flex-direction:column;gap:6px; }
+.chatSugg {
+  text-align:left;background:var(--surf);border:1px solid var(--wire);
+  border-radius:var(--r);padding:10px 14px;font-size:13px;color:var(--mid);
+  cursor:pointer;transition:all .2s;font-family:var(--ff-b);
+}
+.chatSugg:hover { border-color:var(--cyan);color:var(--cyan); }
+
+.msg { display:flex;flex-direction:column;gap:4px;max-width:88%; }
+.msgUser  { align-self:flex-end; }
+.msgCoach { align-self:flex-start; }
+.msgRole  { font-family:var(--ff-m);font-size:10px;color:var(--dim);letter-spacing:1px;text-transform:uppercase; }
+.msgUser .msgRole { text-align:right; }
+.msgText {
+  background:var(--surf);border:1px solid var(--wire);border-radius:var(--r);
+  padding:12px 16px;font-size:13px;line-height:1.7;color:var(--text);
+}
+.msgUser .msgText { background:rgba(0,212,255,.08);border-color:rgba(0,212,255,.2); }
+.typing {
+  display:flex;gap:5px;padding:14px 18px;background:var(--card);
+  border:1px solid var(--wire);border-radius:var(--r);
+}
+.typing span { width:7px;height:7px;border-radius:50%;background:var(--dim);animation:pulse 1.2s infinite; }
+.typing span:nth-child(2){animation-delay:.2s}
+.typing span:nth-child(3){animation-delay:.4s}
+
+.chatErr {
+  background:rgba(255,69,96,.1);border:1px solid var(--red);
+  border-radius:var(--r);padding:10px 14px;font-size:12px;color:var(--red);font-family:var(--ff-m);
+}
+.chatInputRow { display:flex;gap:10px; }
+
+.restart {
+  display:block;width:100%;padding:20px;background:linear-gradient(135deg,var(--cyan),var(--cyan2));
+  border:none;border-radius:var(--r2);color:#000;font-family:var(--ff-h);
+  font-size:20px;font-weight:800;letter-spacing:1px;cursor:pointer;
+  transition:all .3s var(--ease);margin-top:16px;
+}
+.restart:hover { transform:translateY(-2px);box-shadow:0 12px 40px rgba(0,212,255,.3); }
