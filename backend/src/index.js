@@ -31,6 +31,9 @@ app.use(cors({
   credentials: true,
 }));
 
+// ── Trust proxy (required for Railway/Vercel) ─────────────
+app.set("trust proxy", 1);
+
 // ── Rate limits ───────────────────────────────────────────
 app.use(rateLimit({ windowMs: 15 * 60 * 1000, max: 300 }));
 app.use("/api/analyse", rateLimit({
