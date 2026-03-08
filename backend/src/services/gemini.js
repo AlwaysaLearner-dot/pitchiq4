@@ -1,7 +1,7 @@
 const fetch = (...a) => import("node-fetch").then(({ default: f }) => f(...a));
 
 const GEMINI_URL =
-  "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent";
+  "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent";
 
 // ── Core Gemini call ──────────────────────────────────────
 // API key comes ONLY from process.env — never from the request
